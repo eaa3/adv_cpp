@@ -11,19 +11,11 @@ private:
     std::string firstname;
     std::string lastname;
     int arbitrarynumber;
-    std::unique_ptr<Resource> pResource;
-
-    // make copy and assignment 
-    // (comment and uncoment those two lines to see the difference in errors)
-    // Person(const Person&);
-    // Person& operator=(const Person&);
+    std::shared_ptr<Resource> pResource;
 
 public:
 
     Person(std::string first, std::string last, int arbitrary);
-
-    Person(const Person& p);
-    Person& operator=(const Person& p);
 
     std::string GetName() const;
     int GetNumber() const { return arbitrarynumber; }

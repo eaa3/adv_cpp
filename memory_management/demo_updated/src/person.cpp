@@ -9,25 +9,6 @@ Person::Person(string first, string last,
 
 }
 
-Person::Person(const Person& p) : firstname(p.firstname),  lastname(p.lastname), 
-                                arbitrarynumber(p.arbitrarynumber) 
-{
-
-    pResource.reset(new Resource(p.GetResourceName()));
-
-}
-Person& Person::operator=(const Person& p){
-
-    firstname = p.firstname;
-    lastname = p.lastname;
-    arbitrarynumber = p.arbitrarynumber;
-
-    pResource.reset(new Resource(p.GetResourceName()));
-
-    return *this;
-
-}
-
 string Person::GetName() const {
 
     return firstname + " " + lastname;
@@ -36,6 +17,6 @@ string Person::GetName() const {
 
 void Person::SetResource(string resourcename){
 
-    pResource.reset(new Resource(resourcename));
+    pResource = std::make_shared<Resource>(resourcename);
 }
 
