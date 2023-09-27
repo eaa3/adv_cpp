@@ -31,29 +31,29 @@ Resource& Resource::operator=(const Resource& r){
     return *this;
 }
 
-Resource::Resource(Resource&& r) : name(std::move(r.name)) {
+// Resource::Resource(Resource&& r) : name(std::move(r.name)) {
 
-    cout << "move constructing " << name << endl;
+//     cout << "move constructing " << name << endl;
 
-}
+// }
 
 
-Resource& Resource::operator=(Resource&& r){
+// Resource& Resource::operator=(Resource&& r){
 
-    //if class contained Resources,
-    //check for self assignment
-    //cleanup existing resources
-    //before setting new values
+//     //if class contained Resources,
+//     //check for self assignment
+//     //cleanup existing resources
+//     //before setting new values
 
-    if( this != &r ){
-        name = std::move(r.name);
-        r.name.clear();
-    }
+//     if( this != &r ){
+//         name = std::move(r.name);
+//         r.name.clear();
+//     }
 
-    cout << "move assignment " << name << endl;
+//     cout << "move assignment " << name << endl;
 
-    return *this;
-}
+//     return *this;
+// }
 
 Resource::~Resource(void){
 

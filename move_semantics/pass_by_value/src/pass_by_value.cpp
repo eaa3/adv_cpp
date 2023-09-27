@@ -18,22 +18,23 @@ int main() {
 
     Resource r("local");
 
+    // Resource r2("lol_local");
 
-    cout << "-------------------------------------------------------------" << endl;
+    // cout << "-------------------------------------------------------------" << endl;
 
     vector<Resource> resources;
 
     resources.push_back(r);
 
-    cout << "-------------------------------------------------------------" << endl;
+    // cout << "-------------------------------------------------------------" << endl;
 
-    resources.push_back(Resource("first"));
+    // resources.push_back(Resource("first"));
 
-    std::for_each(begin(resources), end(resources),
-                    [](const Resource& res) { cout << res.GetName() << endl; }
-                    );
+    // std::for_each(begin(resources), end(resources),
+    //                 [](const Resource& res) { cout << res.GetName() << endl; }
+    //                 );
 
-    cout << endl;
+    // cout << endl;
 
 
     return 0;   
